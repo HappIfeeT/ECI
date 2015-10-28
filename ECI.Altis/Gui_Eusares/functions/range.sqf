@@ -21,20 +21,6 @@ if  ((getPlayerUID player) in Instructeurs) then { // attention ! a enlever pour
 		case 2 : {missionNamespace getVariable "isCqb3Running";};
 		case default {hint "_isRunning error";};
 	};
-/*
-	_isInUse = switch (_idstand) do {
-		case 0 : {missionNamespace getVariable "isCqb1InUse";};
-		case 1 : {missionNamespace getVariable "isCqb2InUse";};
-		case 2 : {missionNamespace getVariable "isCqb3InUse";};
-		case default {hint "get_isInUse error";};
-	};
-    switch (_idstand) do {
-		case 0 : {missionNamespace setVariable ["isCqb1InUse", true, true];};
-		case 1 : {missionNamespace setVariable ["isCqb2InUse", true, true];};
-		case 2 : {missionNamespace setVariable ["isCqb3InUse", true, true];};
-		case default {hint "_isInUse error";};
-		};
-*/
     createDialog "DlgECIRange";
 	_dlg = findDisplay RNG_IDD;
 	_ctrl = _dlg displayCtrl RNG_IDC_BG_window;
@@ -62,21 +48,21 @@ if  ((getPlayerUID player) in Instructeurs) then { // attention ! a enlever pour
 		lbSetCurSel [RNG_IDC_type, 0];
 	};
 	_Elimine = switch (_idstand) do {
-		case 0 : {Elimine ;};// /(count eleve_exo1)
-		case 1 : {Elimine2 ;};// /(count eleve_exo2)
-		case 2 : {Elimine3 ;};// /(count eleve_exo3)
+		case 0 : {Elimine ;}; 
+		case 1 : {Elimine2 ;}; 
+		case 2 : {Elimine3 ;};  
 		default {0;};
 	};
 	_Blesse = switch (_idstand) do {
-		case 0 : {Blesse ;};// /(count eleve_exo1)
-		case 1 : {Blesse2 ;};// /(count eleve_exo2)
-		case 2 : {Blesse3 ;};// /(count eleve_exo3)
+		case 0 : {Blesse ;}; 
+		case 1 : {Blesse2 ;}; 
+		case 2 : {Blesse3 ;}; 
 		default {0;};
 	};
 	_Civil = switch (_idstand) do {
-		case 0 : {Civil ;};// /(count eleve_exo1)
-		case 1 : {Civil2 ;};// /(count eleve_exo2)
-		case 2 : {Civil3 ;};// /(count eleve_exo3)
+		case 0 : {Civil ;}; 
+		case 1 : {Civil2 ;}; 
+		case 2 : {Civil3 ;}; 
 		default {0;};
 	};
 	_DureeExCQB = switch (_idstand) do {
