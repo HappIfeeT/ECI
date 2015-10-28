@@ -1,0 +1,14 @@
+////////////////////////////////////////////////////////
+//                  2015 Arma 3                       //
+//           	 Vetulus aka HappIfeeT                //
+//             - http://www.eusares.fr -              //
+//            Ecole et Centre d'instruction           //
+////////////////////////////////////////////////////////
+
+Bienvenu à l'E.C.I.
+Le centre d'instruction Eusarien écrit par Ghost Chef-Instructeur Eusarien et scripté par VetUlUs (aka HappIfeeT).
+Les exercices ont tous été écris dans un but pédagogique par Ghost, fort de son expérience professionnel et de sa passion pour l'"AirSoft",
+son écriture efficace nous permet d'aller à l'essentiel pour les applications TAI et CQB.
+****************************************************************************************************************************************************************************************
+TOUS LES SCRIPTS SONT DECLARES LIBRES DE DROITS POUR L'UTILISATION DANS D'AUTRES PROJETS, A CONDITION DE CITER L'AUTEUR : UN MERCI FAIT TOUJOURS PLAISIR............... VetUlUs.
+****************************************************************************************************************************************************************************************    
