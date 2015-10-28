@@ -6,17 +6,15 @@
 //            Ecole et Centre d'instruction           //
 ////////////////////////////////////////////////////////
 
-#define	ECI_COLOR_RGB_OLIVE			{0.1,0.16,0.08,0.8}
-#define	ECI_COLOR_RGB_LIGHTOLIVE	{0.125,0.2,0.1,0.8}
-#define	ECI_COLOR_RGB_RED			{0.99,0.05,0.04,1}
+#define	ECI_COLOR_RGB_RED		{0.99,0.05,0.04,1}
 #define	ECI_COLOR_RGB_REDSOMBRE		{0.32,0.1,0.08,0.8}
 #define	ECI_COLOR_RGB_LIGHTRED		{0.4,0.125,0.1,0.8}
-#define	ECI_COLOR_RGB_GREEN			{0.11,0.69,0,1}
+#define	ECI_COLOR_RGB_GREEN		{0.11,0.69,0,1}
 #define	ECI_COLOR_RGB_GREENSOMBRE	{0.05,0.29,0,1}
 #define	ECI_COLOR_RGB_GRISCLAIR		{0.99,0.36,0.33,0}
 #define	ECI_COLOR_RGB_GRISSOMBRE	{0,0,0,0.4}
-#define	ECI_COLOR_RGB_BLANC			{1,1,1,1}
-#define	ECI_COLOR_RGB_BLACK			{0,0,0,1}
+#define	ECI_COLOR_RGB_BLANC		{1,1,1,1}
+#define	ECI_COLOR_RGB_BLACK		{0,0,0,1}
 //BASIC CONTROLS
 	class StructuredText {
 		idc = -1;
