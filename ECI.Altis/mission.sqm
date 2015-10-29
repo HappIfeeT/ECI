@@ -5,7 +5,7 @@ class Mission
 	{
 		"a3_map_altis",
 		"a3_characters_f",
-		"aia_misc3_config",
+	 
 		"A3_Structures_F_Items_Electronics",
 		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Characters_F_BLUFOR",
@@ -24,7 +24,7 @@ class Mission
 	{
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
-		"aia_misc3_config",
+	 
 		"A3_Structures_F_Items_Electronics",
 		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Structures_F_System",

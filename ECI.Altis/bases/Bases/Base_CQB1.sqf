@@ -95,22 +95,6 @@ _object = createVehicle ["Sr_border", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 22;
 _object setPosATL _pos;
 
-_pos = [14195.0429688,16245.223633,-0.00285721];
-_object = createVehicle ["MASH_EP1", _pos, [], 0, "CAN_COLLIDE"];
-_object setDir 307;
-_object setPosATL _pos;
-[_object, -2, -8.54294e-007] call BIS_fnc_setPitchBank;
-
-_pos = [14157.344727,16274.609375,-0.00477028];
-_object = createVehicle ["ShootingRange_ACR", _pos, [], 0, "CAN_COLLIDE"];
-_object setDir 24;
-_object setPosATL _pos;
-
-_pos = [14158.989258,16278.268555,-0.00464439];
-_object = createVehicle ["ShootingRange_ACR", _pos, [], 0, "CAN_COLLIDE"];
-_object setDir 24.0499;
-_object setPosATL _pos;
-
 _pos = [14156.681641,16272.749023,-0.0599976];
 _object = createVehicle ["Land_CncBlock_Stripes", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 26.04;
