@@ -5,10 +5,15 @@
 //            Ecole et Centre d'instruction           //
 ////////////////////////////////////////////////////////
 
-Bienvenu à l'E.C.I.
-Le centre d'instruction Eusarien écrit par Ghost Chef-Instructeur Eusarien et scripté par VetUlUs (aka HappIfeeT).
-Les exercices ont tous été écris dans un but pédagogique par Ghost, fort de son expérience professionnel et de sa passion pour l'"AirSoft",
-son écriture efficace nous permet d'aller à l'essentiel pour les applications TAI et CQB.
-****************************************************************************************************************************************************************************************
-TOUS LES SCRIPTS SONT DECLARES LIBRES DE DROITS POUR L'UTILISATION DANS D'AUTRES PROJETS, A CONDITION DE CITER L'AUTEUR : UN MERCI FAIT TOUJOURS PLAISIR............... VetUlUs.
-****************************************************************************************************************************************************************************************    
+Bienvenu Ã  l'E.C.I.
+Le centre d'instruction Eusarien Ã©crit par Ghost Chef-Instructeur Eusarien
+et scriptÃ© par VetUlUs (aka HappIfeeT).
+Les exercices ont tous Ã©tÃ© Ã©cris dans un but pÃ©dagogique par Ghost,
+fort de son expÃ©rience professionnel et de sa passion pour l'"AirSoft",
+son Ã©criture efficace nous permet d'aller Ã  l'essentiel pour les applications
+TAI et CQB.
+*****************************************************************************
+TOUS LES SCRIPTS SONT DECLARES LIBRES DE DROITS POUR L'UTILISATION DANS 
+D'AUTRES PROJETS, A CONDITION DE CITER L'AUTEUR : UN MERCI FAIT TOUJOURS 
+PLAISIR............... VetUlUs.
+*****************************************************************************    
