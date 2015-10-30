@@ -42,7 +42,6 @@ class RscTitles
 {
 	#include "HappiRsc\Happi_rsc_dynamic.hpp"
 	#include "HappiRsc\Happi_rsc_static.hpp"
-	#include "HappiRsc\rsc_picture_small.hpp"
 	#include "Scripts\statusBar.hpp" 
 };
 class cfgSounds
