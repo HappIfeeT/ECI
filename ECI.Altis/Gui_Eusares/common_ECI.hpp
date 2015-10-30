@@ -16,26 +16,25 @@
 #define	ECI_COLOR_RGB_BLANC		{1,1,1,1}
 #define	ECI_COLOR_RGB_BLACK		{0,0,0,1}
 //BASIC CONTROLS
-	class StructuredText {
-		idc = -1;
-		type = CT_STRUCTURED_TEXT;
-		style = ST_LEFT;
-		colorText[] = {0, 0, 0, 1};
-		colorBackground[] = {0, 0, 0, 0.2};
-		sizeEx = 0.015 * safezoneH;
-	    size = 0.015 * safezoneH;
-		text = "<t>Your yellow text!</t>";
-		lineSpacing = 1;
-		class Attributes { 
-			font = "TahomaB"; 
-			color = "#000000"; 
-			align = "left"; 
-			valign = "middle"; 
-			shadow = false; 
-			//shadowColor = "#ff0000"; 
-			size = "1"; 
-		}; 
-	};
+class StructuredText {
+idc = -1;
+type = CT_STRUCTURED_TEXT;
+style = ST_LEFT;
+colorText[] = {0, 0, 0, 1};
+colorBackground[] = {0, 0, 0, 0.2};
+sizeEx = 0.015 * safezoneH;
+size = 0.015 * safezoneH;
+text = " ";
+lineSpacing = 1;
+class Attributes { 
+font = "TahomaB"; 
+color = "#000000"; 
+align = "left"; 
+valign = "middle"; 
+shadow = false; 
+size = "1"; 
+	}; 
+};
 class ECIText : RscText{
 	colorText[ ]={0,0.26,0.2,1 };
 	sizeEx = 0.015 * safezoneH;
