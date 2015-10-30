@@ -15,7 +15,7 @@ if (isServer) then {
 call compile preprocessFileLineNumbers "bases\initBases.sqf";
 call compile preprocessFileLineNumbers "utils\initServerWeather.sqf";
 /////Instructeurs///////////////////////////////////////
-Instructeurs = ["XXXXXXXXXXXXX","XXXXXXXXXXXXX","XXXXXXXXXXXXX"];
+Instructeurs = ["XXXXXXXXXXXXX","XXXXXXXXXXXXX","XXXXXXXXXXXXX"]; //Table des ID JOUEUR des Instructeurs, A REMPLIR
 publicVariable "Instructeurs";
 waitUntil {!isNil "Instructeurs"};	
 };
