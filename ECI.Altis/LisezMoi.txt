@@ -5,6 +5,26 @@
 //            Ecole et Centre d'instruction           //
 ////////////////////////////////////////////////////////
 
+<<<<<<< .mine
+Bienvenu à l'E.C.I.
+Le centre d'instruction Eusarien écrit par Ghost Chef-Instructeur Eusarien 
+et scripté par VetUlUs (aka HappIfeeT).
+Les exercices ont tous été écris dans un but pédagogique par Ghost, fort de 
+son expérience professionnel et de sa passion pour l'"AirSoft",
+son écriture efficace nous permet d'aller à l'essentiel pour les applications 
+TAI et CQB.
+**********************************************************************************
+*TOUS LES SCRIPTS SONT DECLARES LIBRES DE DROITS POUR L'UTILISATION DANS         *
+*D'AUTRES PROJETS, A CONDITION DE CITER L'AUTEUR : UN MERCI FAIT TOUJOURS PLAISIR*
+*VetUlUs.                                                                        *
+**********************************************************************************   ||||||| .r14
+Bienvenu à l'E.C.I.
+Le centre d'instruction Eusarien écrit par Ghost Chef-Instructeur Eusarien et scripté par VetUlUs (aka HappIfeeT).
+Les exercices ont tous été écris dans un but pédagogique par Ghost, fort de son expérience professionnel et de sa passion pour l'"AirSoft",
+son écriture efficace nous permet d'aller à l'essentiel pour les applications TAI et CQB.
+****************************************************************************************************************************************************************************************
+TOUS LES SCRIPTS SONT DECLARES LIBRES DE DROITS POUR L'UTILISATION DANS D'AUTRES PROJETS, A CONDITION DE CITER L'AUTEUR : UN MERCI FAIT TOUJOURS PLAISIR............... VetUlUs.
+****************************************************************************************************************************************************************************************    =======
 !!!!ATTENTION VERSION SERVEUR UNIQUEMENT!!!!!!!!!!!
 A CAUSE DU VERROUILLAGE SYSTEM QUI FONCTIONNE SUR LA BASE DES GUID
 IL FAUT RENDRE INACTIVES LES IDENTIFICATION GUID DANS:
@@ -30,3 +50,4 @@ TOUS LES SCRIPTS SONT DECLARES LIBRES DE DROITS POUR L'UTILISATION DANS
 D'AUTRES PROJETS, A CONDITION DE CITER L'AUTEUR : UN MERCI FAIT TOUJOURS 
 PLAISIR............... VetUlUs.
 *********x****E****t*******c*s************e**********p*****************U******    
+>>>>>>> .r24

@@ -10,18 +10,25 @@ X_Server = false;
 X_Client = false;
 X_JIP = false;
 [] execVM "Scripts\statusBar.sqf";
+ChairECI = [];
+
 if (isServer) then {
 ////initialisations/des objets/mapping//////////////////
 call compile preprocessFileLineNumbers "bases\initBases.sqf";
 call compile preprocessFileLineNumbers "utils\initServerWeather.sqf";
+////initialisations/des fonctions//////////////////
+
+////intialisation des chaises///////////////////////////
+
 /////Instructeurs///////////////////////////////////////
-Instructeurs = ["XXXXXXXXXXXXX","XXXXXXXXXXXXX","XXXXXXXXXXXXX"]; //Table des ID JOUEUR des Instructeurs, A REMPLIR
+Instructeurs = ["76561198045656046","76561198015483943","76561198000099354"];
 publicVariable "Instructeurs";
 waitUntil {!isNil "Instructeurs"};	
 };
 /////////////briefing////////////////////////////////////
 if !(isServer && isDedicated) then {
  	[] execVM "briefing.sqf";
+	
 };
 //Reconnaissance/des/localités///////////////////////////
 if (isServer) then
@@ -51,8 +58,17 @@ call compile preprocessFileLineNumbers "standCqb\init.sqf";
 call compile preprocessFileLineNumbers "Gui_Eusares\init.sqf";
 //initJIP////Jour/Nuit/////////////////////////////////////
 waitUntil {X_inIT};
+// Espace commun
+HappI_fnc_switchMove = {
+    private["_object","_anim"];
+    _object = _this select 0;
+    _anim = _this select 1;
+    _object switchMove _anim;
+    
+};
 if (X_JIP) then {
     call compile preprocessFileLineNumbers "initJIP.sqf";
+ 
 };
 ////initialisation du GodMod///////////////////////////////
 if (X_inIT) then {
@@ -60,7 +76,16 @@ waitUntil {player};
 player allowDamage false;
 ////Persistence du script///// ////////////////////////////
 [] execVM "Scripts\GodMod.sqf";
+ 
 };
+ 
+ChairAdd = {
+_object = _this select 0;
+_object addAction ["<t color='#0099FF'>S'assoir</t>","Scripts\Chair\sitdown.sqf"]; 
+ };	
+{
+[[_x], "ChairAdd"] call BIS_fnc_MP;
+} forEach ChairECI;
 //////cleaning/script/////////sec///////////////////////////
 [
     1, //   dead bodies  
