@@ -50,7 +50,7 @@ if (X_Server) then {
 };
 if (X_Client) then {
 /////////////////////////////startClientCqb2///////////////////////////////
-	HappI_fnc_startClientCqb2 = {
+HappI_fnc_startClientCqb2 = {
 	sleep random(0.5);sleep random(0.5);
 		_targets = _this select 0;
 		_level = _this select 1;
@@ -81,14 +81,14 @@ if (X_Client) then {
 			sleep 0.1;
 			_civilSelected = missionNamespace getVariable "ExCivselected2";
 			_ID = (getPlayerUID player);
-			if ((!_civilSelected) && (_ID in Instructeurs)) then {// attention ! a enlever pour le PBO
+			if ((!_civilSelected)  && (_ID in Instructeurs)) then {// attention ! a enlever pour le PBO
 			missionNamespace setVariable ["ExCivselected2", true, true];
 			_ftargets = _targets;
 			_CivilNb =  floor random (7);
-			NbCivil2 = _CivilNb;
+			NbCivil2 = _CivilNb + 1;
 			publicVariable "NbCivil2";
 				for "_i" from 0 to _CivilNb do {
-					_rand = random (31);
+					_rand = random (28);
 					_idx = floor ( _rand); 
 					_target = _ftargets select _idx;
 					_target setObjectTextureGlobal [0, "data\pictures\textures\eci_target_civ.paa"];
@@ -113,6 +113,7 @@ _NbCibles2 = NbCibles2;
 _NbCivils2 = NbCivil2;		
 [_NbCibles2, _NbCivils2] call ECI_RNG_MajCibles;
 _ID = (getPlayerUID player);
+
 if !(_ID in Instructeurs) then {
 		switch (_level) do {
 			case 0 : {
@@ -157,34 +158,44 @@ if !(_ID in Instructeurs) then {
 			};
 			case default {
 				player globalChat "undifined level";
-			};
-		};
+						  };
+	  };
 };		
 		// Wait
+
 while {!endCqb2} do {
 _ID = (getPlayerUID player);
 if (_ID in Instructeurs) then {	// attention ! a enlever pour le PBO
-_HeadShot =  format ["HeadShots : %1/%2" , Elimine2 , NbCibles2 ];
-_Elim =  format ["Elimines : %1/%2" , Blesse2 , NbCibles2 ];
-_Civ =  format ["Civil blesses : %1/%2",Civil2, NbCivil2];
-_breaker = "<br />";
-_title  =   _HeadShot + _breaker  +  _Elim + _breaker  +  _Civ ;
-hint parseText _title;
-	};		
-		
 sleep 1;
- };
-		// End client
-/*		
 switch (_level) do {
-case 0 :	 {deleteVehicle stopCqb2;};
-case 1 :	 {deleteVehicle stopCqb2;};
-					};
-*/	
-};
+case 0 : {
+ 	_titleName = _levelName;
+	_HeadShot =  format ["HeadShots : %1/%2",Elimine2,NbCibles2 ];
+	_Elim =  format ["Elimines : %1/%2",Blesse2,NbCibles2 ];
+ 	_breaker = "<br />";
+	_title  =  _titleName + _breaker  +  _HeadShot + _breaker  +  _Elim + _breaker    ;
+	hint parseText _title;
+	};
+case 1 : {
+	_titleName = _levelName;
+	_HeadShot =  format ["HeadShots : %1/%2",Elimine2,NbCibles2 ];
+	_Elim =  format ["Elimines : %1/%2",Blesse2,NbCibles2 ];
+	_Civ =  format ["Civils blesses : %1/%2",Civil2,NbCivil2 ];
+	_breaker = "<br />";
+	_title  =  _titleName + _breaker  +  _HeadShot + _breaker  +  _Elim + _breaker  +  _Civ ;
+	hint parseText _title;
+	};
 
+case default {
+	player globalChat "undifined level";
+              };
+		};	
+	};
+  };
+
+};
 ///////////////////startClientPublicCqb2/////////pour/la/sonnerie/en/global////////////////////////////
-	HappI_fnc_startClientPublicCqb2 = {
+HappI_fnc_startClientPublicCqb2 = {
 		_level = _this select 0;
 switch (_level) do {
 			case 0 : {
@@ -222,10 +233,10 @@ switch (_level) do {
 			};
 		}	
 	};
+
 ///////////////////////////////////////////////////////////////////////////////////////////
 HappI_fnc_clearHUDCqb2 = {
 hint "";
 };
-
 };
 

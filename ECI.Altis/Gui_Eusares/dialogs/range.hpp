@@ -164,7 +164,7 @@ class  DlgECIRange {
 			idc = RNG_IDC_ElimCQB;
 			x =  LEFTDIV_W * 0.44 + LEFTDIV_W * 0.2 - LEFTDIV_W * 0.156;
 			y = (LEFTDIV_H * 0.36) + (LEFTDIV_H * 0.35)  ;
-			w = LEFTDIV_W * 0.13;
+			w = LEFTDIV_W * 0.15;
 			h = LEFTDIV_H * 0.05;
 			size = TEXT_SIZE_NORMAL*0.6;
 			font = "PuristaBold";
@@ -175,7 +175,7 @@ class  DlgECIRange {
 			idc = RNG_IDC_blesseCQB;
 			x =  LEFTDIV_W * 0.44 + LEFTDIV_W * 0.2 - LEFTDIV_W * 0.156;
 			y = (LEFTDIV_H * 0.36) + (LEFTDIV_H * 0.375)  ;
-			w = LEFTDIV_W * 0.13;
+			w = LEFTDIV_W * 0.15;
 			h = LEFTDIV_H * 0.05;
 			size = TEXT_SIZE_NORMAL*0.6 ;
 			font = "PuristaBold";
@@ -186,7 +186,7 @@ class  DlgECIRange {
 			idc = RNG_IDC_civilCQB;
 			x =  LEFTDIV_W * 0.44 + LEFTDIV_W * 0.2 - LEFTDIV_W * 0.156;
 			y = (LEFTDIV_H * 0.36) + (LEFTDIV_H * 0.4)  ;
-			w = LEFTDIV_W * 0.13;
+			w = LEFTDIV_W * 0.15;
 			h = LEFTDIV_H * 0.05;
 			size = TEXT_SIZE_NORMAL*0.6 ;
 			font = "PuristaBold";
@@ -197,7 +197,7 @@ class  DlgECIRange {
 			idc = RNG_IDC_DureeexoCQB;
 			x =  LEFTDIV_W * 0.44 + LEFTDIV_W * 0.2 - LEFTDIV_W * 0.156;
 			y = (LEFTDIV_H * 0.36) + (LEFTDIV_H * 0.425)  ;
-			w = LEFTDIV_W * 0.1;
+			w = LEFTDIV_W * 0.15;
 			h = LEFTDIV_H * 0.05;
 			size = TEXT_SIZE_NORMAL*0.6 ;
 			font = "PuristaBold";

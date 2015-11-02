@@ -89,3 +89,14 @@ _object = createVehicle ["Land_Trophy_01_gold_F", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 20;
 _object setPosATL _pos;
 _object enableSimulation false;
+
+
+_pos = [14172.770508,16246.365234,0.659964];
+_object = createVehicle ["OfficeTable_01_new_F", _pos, [], 0, "CAN_COLLIDE"];
+_object setDir 110;
+_object setPosATL _pos;
+
+_pos = [14172.141602,16245.527344,0.656986];
+_object = createVehicle ["OfficeTable_01_new_F", _pos, [], 0, "CAN_COLLIDE"];
+_object setDir 200;
+_object setPosATL _pos;

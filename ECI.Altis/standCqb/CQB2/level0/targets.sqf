@@ -34,7 +34,7 @@ sleep 0.001;
 };
 //cibles permanente
 //1°couloir
-_pos = [15240.314453,17445.195313,-0.0292797];
+_pos = [15240.314453,17445.195313,0.0292797];
 _object = createVehicle ["TargetP_Inf3_Acc1_NoPop_F", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 46;
 _object setPosATL _pos;
@@ -46,7 +46,7 @@ _object setPosATL _pos;
 cqb2Targets set [count cqb2Targets, _object]; 
 /////
 if(random 1 > 0.5) then {
-_pos = [15235.692383,17442.693359,-0.014513];
+_pos = [15235.692383,17442.693359,0.014513];
 _object = createVehicle ["TargetP_Inf3_Acc1_NoPop_F", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 220;
 _object setPosATL _pos;
@@ -70,7 +70,7 @@ sleep 0.001;
 };
 
 if(random 1 > 0.5) then {
-_pos = [15241.719727,17442.923828,-0.0663948];
+_pos = [15241.719727,17442.923828,0.0663948];
 _object = createVehicle ["TargetP_Inf3_Acc1_NoPop_F", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 43;
 _object setPosATL _pos;
@@ -86,7 +86,7 @@ _object = createVehicle ["TargetP_Inf3_Acc1_NoPop_F", _pos, [], 0, "CAN_COLLIDE"
 _object setDir 115;
 _object setPosATL _pos;
 deleteVehicle _object;
-_pos = [15240.345703,17440.507813,-0.0660706];
+_pos = [15240.345703,17440.507813,0.0660706];
 _object = createVehicle ["TargetP_Inf3_Acc1_NoPop_F", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 115;
 _object setPosATL _pos;
@@ -95,7 +95,7 @@ sleep 0.001;
 };
 
 if(random 1 > 0.5) then {
-_pos = [15237.0888672,17437.693359,-0.0394402];
+_pos = [15237.0888672,17437.693359,0.0394402];
 _object = createVehicle ["TargetP_Inf3_NoPop_F", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 50;
 _object setPosATL _pos;
@@ -192,7 +192,7 @@ sleep 0.001;
 
 
 if(random 1 > 0.5) then {
-_pos = [15225.395508,17425.396484,-0.0519104];
+_pos = [15225.395508,17425.396484,0.0519104];
 _object = createVehicle ["TargetP_Inf2_Acc1_NoPop_F", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 150;
 _object setPosATL _pos;
@@ -203,7 +203,7 @@ _object setPosATL _pos;
 cqb2Targets set [count cqb2Targets, _object]; 
 sleep 0.001;
 } else {
-_pos = [15224.112305,17424.169922,-0.04986];
+_pos = [15224.112305,17424.169922,0.04986];
 _object = createVehicle ["TargetP_Inf2_Acc1_NoPop_F", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 190;
 _object setPosATL _pos;
@@ -216,7 +216,7 @@ sleep 0.001;
 };
 //////////////
 if(random 1 > 0.5) then {
-_pos = [15221.43457,17431.335938,-0.170668];
+_pos = [15221.43457,17431.335938,0.070668];
 _object = createVehicle ["TargetP_Inf2_Acc1_NoPop_F", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 20;
 _object setPosATL _pos;
@@ -227,7 +227,7 @@ _object setPosATL _pos;
 cqb2Targets set [count cqb2Targets, _object]; 
 sleep 0.001;
 } else {
-_pos = [15222.106445,17429.818359,-0.20532];
+_pos = [15222.106445,17429.818359,0.00532];
 _object = createVehicle ["TargetP_Inf2_Acc1_NoPop_F", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 40;
 _object setPosATL _pos;
@@ -240,7 +240,7 @@ sleep 0.001;
 };
 
 if(random 1 > 0.5) then {
-_pos = [15220.369141,17429.685547,-0.173536];
+_pos = [15220.369141,17429.685547,0.073536];
 _object = createVehicle ["TargetP_Inf2_Acc1_NoPop_F", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 350;
 _object setPosATL _pos;
@@ -251,7 +251,7 @@ _object setPosATL _pos;
 cqb2Targets set [count cqb2Targets, _object]; 
 sleep 0.001;
 } else {
-_pos = [15218.921875,17428.513672,-0.189751];
+_pos = [15218.921875,17428.513672,0.089751];
 _object = createVehicle ["TargetP_Inf2_Acc1_NoPop_F", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 310;
 _object setPosATL _pos;
@@ -264,7 +264,7 @@ sleep 0.001;
 };
 
 if(random 1 > 0.5) then {
-_pos = [15228.724609,17439.673828,3.49715];
+_pos = [15228.724609,17439.673828,3.39715];
 _object = createVehicle ["TargetP_Inf3_Acc1_NoPop_F", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 46;
 _object setPosATL _pos;
@@ -275,12 +275,12 @@ _object setPosATL _pos;
 cqb2Targets set [count cqb2Targets, _object]; 
 sleep 0.001;
 } else {
-_pos = [15231.0527344,17441.689453,3.45018];
+_pos = [15231.0527344,17441.689453,3.35018];
 _object = createVehicle ["TargetP_Inf3_Acc1_NoPop_F", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 352;
 _object setPosATL _pos;
 deleteVehicle _object;
-_pos = [15231.0527344,17441.689453,3.45018];
+_pos = [15231.0527344,17441.689453,3.35018];
 _object = createVehicle ["TargetP_Inf3_Acc1_NoPop_F", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 352;
 _object setPosATL _pos;
@@ -533,7 +533,7 @@ sleep 0.001;
 };
 
 if(random 1 > 0.5) then {
-_pos = [15231.805664,17433.605469,-0.0143185];
+_pos = [15231.805664,17433.605469,-0.0043185];
 _object = createVehicle ["TargetP_Inf3_Acc1_NoPop_F", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 310;
 _object setPosATL _pos;
@@ -619,7 +619,7 @@ _object setPosATL _pos;
 cqb2Targets set [count cqb2Targets, _object]; 
 sleep 0.001;
 } else {
-_pos = [15228.191406,17435.0605469,03.3];
+_pos = [15228.191406,17435.0605469,3.3];
 _object = createVehicle ["TargetP_Inf3_Acc1_NoPop_F", _pos, [], 0, "CAN_COLLIDE"];
 _object setDir 130;
 _object setPosATL _pos;

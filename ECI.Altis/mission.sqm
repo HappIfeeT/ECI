@@ -5,7 +5,6 @@ class Mission
 	{
 		"a3_map_altis",
 		"a3_characters_f",
-	 
 		"A3_Structures_F_Items_Electronics",
 		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Characters_F_BLUFOR",
@@ -18,14 +17,15 @@ class Mission
 		"A3_Signs_F",
 		"A3_Structures_F_Walls",
 		"A3_Structures_F_Civ_Lamps",
-		"A3_Characters_F_Gamma"
+		"A3_Characters_F_Gamma",
+		"A3_Structures_F_Civ_Camping"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
-	 
 		"A3_Structures_F_Items_Electronics",
+		"A3_Structures_F_Civ_Camping",
 		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Structures_F_System",
 		"A3_Structures_F_Mil_Helipads",
@@ -280,7 +280,7 @@ class Mission
 					id=10;
 					side="WEST";
 					vehicle="B_Soldier_F";
-					player="PLAY CDG";
+					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.60000002;
 					init="this unassignitem ""NVGoggles"";  this removeitem ""NVGoggles"";  ";
@@ -510,7 +510,6 @@ class Mission
 					id=21;
 					side="WEST";
 					vehicle="B_soldier_AAR_F";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					description="cqb2";
@@ -545,12 +544,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15934.772,17.81978,16289.916};
-					azimut=-295.97299;
+					position[]={15928.221,17.818668,16297.757};
+					azimut=-218.20799;
 					id=23;
 					side="WEST";
 					vehicle="B_soldier_AAR_F";
-					player="PLAYER COMMANDER";
+					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					description="cqb3";
@@ -608,8 +607,6 @@ class Mission
 			vehicle="SmallTable";
 			skill=0.60000002;
 		};
-		
-
 		class Item1
 		{
 			position[]={14357.076,18.7971,16345.482};
@@ -705,7 +702,7 @@ class Mission
 		};
 		class Item10
 		{
-			position[]={14170.938,19.589153,16253.135};
+			position[]={14176.484,19.596321,16250.729};
 			azimut=204.52299;
 			id=36;
 			side="EMPTY";
@@ -715,8 +712,8 @@ class Mission
 		};
 		class Item11
 		{
-			position[]={14169.115,19.588011,16253.992};
-			azimut=204.52298;
+			position[]={14173.887,19.590694,16251.979};
+			azimut=213.44426;
 			id=37;
 			side="EMPTY";
 			vehicle="Land_MapBoard_F";
@@ -725,8 +722,8 @@ class Mission
 		};
 		class Item12
 		{
-			position[]={14172.915,19.590239,16252.319};
-			azimut=204.52299;
+			position[]={14178.813,19.600334,16249.916};
+			azimut=181.27992;
 			id=38;
 			side="EMPTY";
 			vehicle="Land_MapBoard_F";

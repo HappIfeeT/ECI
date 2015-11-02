@@ -92,14 +92,14 @@ sleep random(0.5);sleep random(0.5);
 			case 2 : 	 {	
 			_civilSelected = missionNamespace getVariable "ExCivselected1";
 			_ID = (getPlayerUID player);
-			if ((!_civilSelected) && (_ID in Instructeurs)) then {// attention ! a enlever pour le PBO          
+			if ((!_civilSelected) && (_ID in Instructeurs)) then {// attention a enlever pour le PBO           
 			missionNamespace setVariable ["ExCivselected1", true, true];
 			_ftargets = _targets;
-			_CivilNb = floor random (7);
-			NbCivil = _CivilNb;
+			_CivilNb = floor random (5);
+			NbCivil = _CivilNb + 1;
 			publicVariable "NbCivil";
 				for "_i" from 0 to _CivilNb do {
-					_rand = random (22);
+					_rand = random (18);
 					_idx = floor ( _rand); 
 					_target = _ftargets select _idx;
 					_target setObjectTextureGlobal [0, "data\pictures\textures\eci_target_civ.paa"];
@@ -130,14 +130,14 @@ sleep random(0.5);sleep random(0.5);
 			case 5 : 	  {	
 			_civilSelected = missionNamespace getVariable "ExCivselected1";
 			_ID = (getPlayerUID player);
-			if (!_civilSelected && (_ID in Instructeurs)) then {// attention ! a enlever pour le PBO 
+			if (!_civilSelected && (_ID in Instructeurs)) then {// attention  a enlever pour le PBO 
 			missionNamespace setVariable ["ExCivselected1", true, true];
 			_ftargets = _targets;
-			_CivilNb = floor random (7);
-			NbCivil = _CivilNb;
+			_CivilNb = floor random (5);
+			NbCivil = _CivilNb + 1;
 			publicVariable "NbCivil";
 				for "_i" from 0 to _CivilNb do {
-					_rand = random (22);
+					_rand = random (18);
 					_idx = floor ( _rand); 
 					_target = _ftargets select _idx;
 					_target setObjectTextureGlobal [0, "data\pictures\textures\eci_target_civ.paa"];
@@ -257,16 +257,58 @@ if !(_ID in Instructeurs) then {
 		};
 };
 		// Wait
+ 
 while {!endCqb1} do {
 _ID = (getPlayerUID player);
 if (_ID in Instructeurs) then {	// attention ! a enlever pour le PBO
-_HeadShot =  format ["HeadShots : %1/%2", Elimine, NbCibles1 ];
-_Elim =  format ["Elimines : %1/%2", Blesse, NbCibles1 ];
-_Civ =  format ["Civil blesses : %1/%2", Civil, NbCivil ];
-_breaker = "<br />";
-_title  =   _HeadShot + _breaker  +  _Elim + _breaker  +  _Civ ;
-hint parseText _title;
-	};		
+sleep 1;
+switch (_level) do {
+case 0 : {
+hint parseText "Simulation sans cible";
+	};
+case 1 : {
+	_titleName = _levelName;
+	_HeadShot =  format ["HeadShots : %1/%2",Elimine ,NbCibles1  ];
+	_Elim =  format ["Elimines : %1/%2",Blesse ,NbCibles1 ];
+	_breaker = "<br />";
+	_title  =  _titleName + _breaker  +  _HeadShot + _breaker  +  _Elim + _breaker   ;
+	hint parseText _title;
+	};
+case 2 : {
+	_titleName = _levelName;
+	_HeadShot =  format ["HeadShots : %1/%2",Elimine ,NbCibles1  ];
+	_Elim =  format ["Elimines : %1/%2",Blesse ,NbCibles1 ];
+	_Civ =  format ["Civils blesses : %1/%2",Civil ,NbCivil ];
+	_breaker = "<br />";
+	_title  =   _titleName + _breaker  +  _HeadShot + _breaker  +  _Elim + _breaker +  _Civ  ;
+	hint parseText _title;
+	};
+case 3 : {
+hint parseText "Simulation sans cible";
+	};
+case 4 : {
+	_titleName = _levelName;
+	_HeadShot =  format ["HeadShots : %1/%2",Elimine ,NbCibles1  ];
+	_Elim =  format ["Elimines : %1/%2",Blesse ,NbCibles1 ];
+	_breaker = "<br />";
+	_title  =   _titleName + _breaker  +  _HeadShot + _breaker  +  _Elim + _breaker    ;
+	hint parseText _title;
+	};
+case 5 : {
+	_titleName = _levelName;
+	_HeadShot =  format ["HeadShots : %1/%2",Elimine ,NbCibles1  ];
+	_Elim =  format ["Elimines : %1/%2",Blesse ,NbCibles1 ];
+	_Civ =  format ["Civils blesses : %1/%2",Civil ,NbCivil ];
+	_breaker = "<br />";
+	_title  =   _titleName + _breaker  +  _HeadShot + _breaker  +  _Elim + _breaker  +  _Civ ;
+	hint parseText _title;
+	};
+case default {
+				player globalChat "HUD Instr error";
+			};	
+ 
+  };
+};		
 /**/		
 sleep 1;
   };

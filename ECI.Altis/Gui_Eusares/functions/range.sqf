@@ -21,6 +21,20 @@ if  ((getPlayerUID player) in Instructeurs) then { // attention ! a enlever pour
 		case 2 : {missionNamespace getVariable "isCqb3Running";};
 		case default {hint "_isRunning error";};
 	};
+/*
+	_isInUse = switch (_idstand) do {
+		case 0 : {missionNamespace getVariable "isCqb1InUse";};
+		case 1 : {missionNamespace getVariable "isCqb2InUse";};
+		case 2 : {missionNamespace getVariable "isCqb3InUse";};
+		case default {hint "get_isInUse error";};
+	};
+    switch (_idstand) do {
+		case 0 : {missionNamespace setVariable ["isCqb1InUse", true, true];};
+		case 1 : {missionNamespace setVariable ["isCqb2InUse", true, true];};
+		case 2 : {missionNamespace setVariable ["isCqb3InUse", true, true];};
+		case default {hint "_isInUse error";};
+		};
+*/
     createDialog "DlgECIRange";
 	_dlg = findDisplay RNG_IDD;
 	_ctrl = _dlg displayCtrl RNG_IDC_BG_window;
@@ -48,21 +62,21 @@ if  ((getPlayerUID player) in Instructeurs) then { // attention ! a enlever pour
 		lbSetCurSel [RNG_IDC_type, 0];
 	};
 	_Elimine = switch (_idstand) do {
-		case 0 : {Elimine ;}; 
-		case 1 : {Elimine2 ;}; 
-		case 2 : {Elimine3 ;};  
+		case 0 : {Elimine ;};// /(count eleve_exo1)
+		case 1 : {Elimine2 ;};// /(count eleve_exo2)
+		case 2 : {Elimine3 ;};// /(count eleve_exo3)
 		default {0;};
 	};
 	_Blesse = switch (_idstand) do {
-		case 0 : {Blesse ;}; 
-		case 1 : {Blesse2 ;}; 
-		case 2 : {Blesse3 ;}; 
+		case 0 : {Blesse ;};// /(count eleve_exo1)
+		case 1 : {Blesse2 ;};// /(count eleve_exo2)
+		case 2 : {Blesse3 ;};// /(count eleve_exo3)
 		default {0;};
 	};
 	_Civil = switch (_idstand) do {
-		case 0 : {Civil ;}; 
-		case 1 : {Civil2 ;}; 
-		case 2 : {Civil3 ;}; 
+		case 0 : {Civil ;};// /(count eleve_exo1)
+		case 1 : {Civil2 ;};// /(count eleve_exo2)
+		case 2 : {Civil3 ;};// /(count eleve_exo3)
 		default {0;};
 	};
 	_DureeExCQB = switch (_idstand) do {
@@ -84,13 +98,13 @@ if  ((getPlayerUID player) in Instructeurs) then { // attention ! a enlever pour
 	};
 	_dlg = findDisplay RNG_IDD;
 	_ctrl = _dlg displayCtrl RNG_IDC_ElimCQB;
-	_ctrl ctrlSetText format ["HeadShots : %1 /%2", _Elimine, _NbCibles]; 
+	_ctrl ctrlSetText format ["HeadShots: %1/%2", _Elimine, _NbCibles]; 
 	_ctrl = _dlg displayCtrl RNG_IDC_blesseCQB;
-	_ctrl ctrlSetText format ["Neutralisés : %1 /%2", _Blesse, _NbCibles];// /(count eleve_exo)
+	_ctrl ctrlSetText format ["Neutralisés: %1/%2", _Blesse, _NbCibles];// /(count eleve_exo)
 	_ctrl = _dlg displayCtrl RNG_IDC_civilCQB;
-	_ctrl ctrlSetText format ["Civils blessés : %1 /%2", _Civil, _NbCivils];// /(count eleve_exo)
+	_ctrl ctrlSetText format ["Civils blessés: %1/%2", _Civil, _NbCivils];// /(count eleve_exo)
 	_ctrl = _dlg displayCtrl RNG_IDC_DureeexoCQB;
-	_ctrl ctrlSetText format ["Temps : %1 sec", _DureeExCQB];
+	_ctrl ctrlSetText format ["Temps:%1 sec", _DureeExCQB];
 	_ctrl = _dlg displayCtrl RNG_IDC_TitleLevel;
 	_ctrl ctrlSetText _levelName;
 if (!_isRunning) then {
@@ -350,32 +364,6 @@ ECI_RNG_scores = {
 	_ctrl = _dlg displayCtrl RNG_IDC_DureeexoCQB;
 	_ctrl ctrlSetText format ["Temps : %1 sec", DureeExCQB];
 	};
-ECI_RNG_effacerscore = {
-    _isRunning = missionNamespace getVariable "isCqb1Running";
-	disableSerialization;
-	Elimine = 0;
-	Blesse = 0;
-	Civil = 0;
-	DureeExCQB = 0;
-	publicVariable "Elimine";
-	publicVariable "Blesse";
-	publicVariable "Civil";	
-	publicVariable "DureeExCQB";
-	_dlg = findDisplay RNG_IDD;
-	_ctrl = _dlg displayCtrl RNG_IDC_ElimCQB;
-	_ctrl ctrlSetText format ["HeadShots : %1", Elimine];
-	_ctrl = _dlg displayCtrl RNG_IDC_blesseCQB;
-	_ctrl ctrlSetText format ["Neutralisés : %1", Blesse];
-	_ctrl = _dlg displayCtrl RNG_IDC_civilCQB;
-	_ctrl ctrlSetText format ["Civils blessés : %1", Civil];
-	_ctrl = _dlg displayCtrl RNG_IDC_DureeexoCQB;
-	_ctrl ctrlSetText format ["Temps : %1 sec", DureeExCQB];
-if (!_isRunning) then {
-	_ctrl = _dlg displayCtrl RNG_IDC_EncoursCQB;
-	_ctrl ctrlSetText " "; } else {
-	_ctrl = _dlg displayCtrl RNG_IDC_EncoursCQB;
-	_ctrl ctrlSetText "EXERCICE EN COURS"; }	
-};
 ECI_RNG_EffaceEncours = {	
 	_dlg = findDisplay RNG_IDD;
 	_ctrl = _dlg displayCtrl RNG_IDC_EncoursCQB;
@@ -402,11 +390,11 @@ ECI_RNG_MajCibles = {
 	_NbCivils = _this select 1;
 	_dlg = findDisplay RNG_IDD;
 	_ctrl = _dlg displayCtrl RNG_IDC_ElimCQB;
-	_ctrl ctrlSetText format ["HeadShots : 0 /%1",  _NbCibles3]; 
+	_ctrl ctrlSetText format ["HeadShots:0/%1",  _NbCibles3]; 
 	_ctrl = _dlg displayCtrl RNG_IDC_blesseCQB;
-	_ctrl ctrlSetText format ["Neutralisés : 0 /%1",  _NbCibles3];
+	_ctrl ctrlSetText format ["Neutralisés:0/%1",  _NbCibles3];
 	_ctrl = _dlg displayCtrl RNG_IDC_civilCQB;
-	_ctrl ctrlSetText format ["Civils blessés : 0 /%1", _NbCivils];
+	_ctrl ctrlSetText format ["Civils blessés:0/%1", _NbCivils];
 	_ctrl = _dlg displayCtrl RNG_IDC_EncoursCQB;
 	_ctrl ctrlSetText "EXERCICE EN COURS";
 };
@@ -416,13 +404,13 @@ _levelName = "";
 	_ctrl = _dlg displayCtrl RNG_IDC_TitleLevel;
 	_ctrl ctrlSetText _levelName;
 	_ctrl = _dlg displayCtrl RNG_IDC_ElimCQB;
-	_ctrl ctrlSetText "HeadShots : 0 /0"; 
+	_ctrl ctrlSetText "HeadShots:0/0"; 
 	_ctrl = _dlg displayCtrl RNG_IDC_blesseCQB;
-	_ctrl ctrlSetText "Neutralisés : 0 /0"  ;
+	_ctrl ctrlSetText "Neutralisés:0/0"  ;
 	_ctrl = _dlg displayCtrl RNG_IDC_civilCQB;
-	_ctrl ctrlSetText "Civils blessés : 0 /0" ;
+	_ctrl ctrlSetText "Civils blessés:0/0" ;
 	_ctrl = _dlg displayCtrl RNG_IDC_DureeexoCQB;
-	_ctrl ctrlSetText "Temps : 0 sec" ;
+	_ctrl ctrlSetText "Temps:0 sec" ;
 };
 
 
