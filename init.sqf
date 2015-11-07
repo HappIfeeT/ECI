@@ -21,7 +21,7 @@ call compile preprocessFileLineNumbers "utils\initServerWeather.sqf";
 ////intialisation des chaises///////////////////////////
 
 /////Instructeurs///////////////////////////////////////
-Instructeurs = ["76561198045656046","76561198015483943","76561198000099354"];
+Instructeurs = ["xxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxxx"];
 publicVariable "Instructeurs";
 waitUntil {!isNil "Instructeurs"};	
 };
